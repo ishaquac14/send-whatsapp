@@ -10,7 +10,7 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <h2 class="text-center mb-5">Send Message !</h2>
                 @if(session('success'))
                     <div class="alert alert-success">{{ session('success') }}</div>
@@ -32,7 +32,7 @@
                         <label for="phone_number" class="form-label">Phone Number:</label>
                         <input type="text" id="phone_number" name="phone_number" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-success">Send !</button>
+                    <button type="submit" class="btn btn-success">Send</button>
                 </form>
             </div>
         </div>
