@@ -25,7 +25,7 @@ class MessageController extends Controller
         $isi = $request->input('message');
         $nomor = $request->input('phone_number');
 
-        $message = sprintf("----------SEND MESSAGE----------\n%s\n-----------------------------------\nFrom : %s", $isi, $nama_pengirim);
+        $message = sprintf("----------SEND MESSAGE----------\n\nPesan : %s\n\n--------------------------------------\nFrom : %s", $isi, $nama_pengirim);
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -43,7 +43,6 @@ class MessageController extends Controller
         $response = curl_exec($curl);
         curl_close($curl);
 
-        // Check if request was successful
         if ($response) {
             return redirect()->back()->with('success', 'Message sent successfully!');
         } else {
